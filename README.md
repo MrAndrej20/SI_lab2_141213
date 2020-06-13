@@ -29,7 +29,7 @@
 * За линијата '3' - `user.getUsername() == null || allUsers.contains(user.getUsername())`:
 
 Combination | Branch | Possible Test Case
-- | - | -
+ --- | --- | ---
 TX | 1,3-4 | 1
 FT | 1,3-4 | 2
 FF | 1,3-5 | 3
@@ -37,7 +37,7 @@ FF | 1,3-5 | 3
 * За линијата '11' - `atChar && user.getEmail().charAt(i) == '.'`:
 
 Combination | Branch | Possible Test Case
-- | - | -
+ --- | --- | ---
 FX | 8,9,11,13-14 | 4
 TF | 8,9,10,11,13-14 | 5
 TT | 8,9,10,11,12,13-15 | 6
@@ -45,7 +45,7 @@ TT | 8,9,10,11,12,13-15 | 6
 * За линијата '13' - `!atChar || !dotChar`:
 
 Combination | Branch | Possible Test Case
-- | - | -
+ --- | --- | ---
 TX | 13-14 | 7
 FT | 13-14 | 8
 FF | 13-15 | 9
@@ -53,7 +53,7 @@ FF | 13-15 | 9
 * Сите Случаеви:
 
 Test Case  | User |  username | password | email | userList
- - | - | - | - | - | -
+ --- | --- | --- | --- | --- | ---
 1 | object | null | Test123! | andrej@emailcom | []
 2 | object | Andrej | Password123! | andrej-new@emailcom | [ Andrej ]
 3 | object | Pero | Pero123! | pero@email.com | [ Andrej ]
@@ -70,7 +70,7 @@ Test Case  | User |  username | password | email | userList
 
 Тест случаевите се:
 Test Case  | User |  username | password | email | userList
- - | - | - | - | - | -
+ --- | --- | --- | --- | --- | ---
 1 | null | | | | []
 2 | object | null | Test123! | andrej@emailcom | []
 3 | object | Andrej | Test123! | null | []
