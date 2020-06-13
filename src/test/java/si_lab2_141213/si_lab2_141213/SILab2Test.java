@@ -12,11 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SILab2Test {
-	private SILab2 siLab2;
-
-	public SILab2Test() {
-		this.siLab2 = new SILab2();
-	}
+	private SILab2 siLab2 = new SILab2();
 
 	private boolean testFunction(User user, ArrayList<String> userList) {
 		boolean isValid = this.siLab2.function(user, userList);

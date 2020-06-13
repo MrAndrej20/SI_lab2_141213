@@ -2,8 +2,7 @@
 
 ## Андреј Сарафимовски, бр. на индекс 141213
 
-## Група на код: 
-Ја добив групата на код 2
+## Група на код: 2
 
 ##  Control Flow Graph
 
@@ -25,7 +24,7 @@
 
 Имаме 3 такви во нашата функција.
 
-Тест случаевите се:
+Тест случаите се:
 * За линијата '3' - `user.getUsername() == null || allUsers.contains(user.getUsername())`:
 
 Combination | Branch | Possible Test Case
@@ -50,7 +49,7 @@ TX | 13-14 | 7
 FT | 13-14 | 8
 FF | 13-15 | 9
 
-* Сите Случаеви:
+* Сите случаи:
 
 Test Case  | User |  username | password | email | userList
  --- | --- | --- | --- | --- | ---
@@ -68,7 +67,7 @@ Test Case  | User |  username | password | email | userList
 
 Според критериумот потребно е да ги истестираме сите патеки од кодот.
 
-Тест случаевите се:
+Тест случаите се:
 Test Case  | User |  username | password | email | userList
  --- | --- | --- | --- | --- | ---
 1 | null | | | | []
@@ -81,7 +80,26 @@ Test Case  | User |  username | password | email | userList
 8 | object | Andrej | NewPassword123! | different@email.com | [ Andrej ]
 
 
-### Објаснување на напишаните unit tests
+## Објаснување на напишаните unit tests
 
-...
-...
+Тестовите се напишани во датотеката src/test/java/si_lab2_141213/si_lab2_141213/SILab2Test.java
+
+Класата **SILab2Test** има приватна променлива која е инстанца од класата **SILab2**. Исто така, има и приватна ***boolean*** функција **"testFunction"**, која како параметри прима ***User*** и ***ArrayList<String>***. Функцијата ја извршува **"function"** од **SILab2** и доколку добие true, го додава корисникот во листата и го враќа резултатот од функцијата **"function"**.
+
+За секој критериум имам посебна функција која ги извршува сите потребни тест случаи.
+
+Од библиотеката Assertions ги користам: ***assertThrows***, ***assertEquals***, ***assertTrue*** и ***assertFalse***.
+
+За секој тест кој фрла грешки користам ***assertThrows***, која очекува функцијата да фрли грешка. Исто така, ***assertThrows*** ја враќа грешката која ја зачувувам во променлива и ја проверувам пораката дали е очекуваната порака со ***assertEquals***.
+
+За секој тест имам документирано како ке се движи низ кодот, и соодветна порака која кажува што треба да се случи.
+
+Example: 
+```
+// 1,3,5,7,8,9,10,11,12,13,15 - 11:TT
+isValid = this.testFunction(new User("Antonio", "Antonio123!", "Antonio@email.com"), userList);
+assertTrue(isValid, "Should return true with a valid User");
+```
+Овој тест се движи низ линиите од функцијата, `1,3,5,7,8,9,10,11,12,13,15`, и содржи порака која го опишува тестот, во овој случај треба да врати true, бидејќи корисникот е валиден.
+
+**На овој начин се напишани сите тестови.**
